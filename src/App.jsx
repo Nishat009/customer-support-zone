@@ -1,35 +1,76 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import shape1 from "./assets/vector1.png";
+import shape2 from "./assets/vector2.png";
+import Footer from "./Components/Footer";
+import Navbar from "./Components/Navbar";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="bg-[#F5F5F5] mx-auto h-screen" >
+      <Navbar />  
+      {/* Background Section */}
+      <div className="bg-[#F5F5F5] py-10">
+        <div className="max-w-[1200px] mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* IN PROGRESS CARD */}
+            <div
+              className="relative min-h-[180px] md:h-[220px]
+              bg-gradient-to-r from-[#632EE3] to-[#9F62F2]
+              rounded-xl shadow-lg px-6 md:px-10 py-8
+              text-white flex flex-col justify-center text-center
+              overflow-hidden"
+            >
+              {/* Left Shape */}
+              <img
+                src={shape1}
+                alt=""
+                className="absolute left-0 top-0 h-full w-auto object-contain opacity-50"
+              />
+
+              {/* Right Shape */}
+              <img
+                src={shape2}
+                alt=""
+                className="absolute right-0 top-0 h-full w-auto object-contain opacity-50"
+              />
+
+              <div className="relative z-10">
+                <h3 className="text-sm md:text-base opacity-90">In-Progress</h3>
+                <h1 className="text-3xl md:text-4xl font-bold mt-3">0</h1>
+              </div>
+            </div>
+
+            {/* RESOLVED CARD */}
+            <div
+              className="relative min-h-[180px] md:h-[220px]
+              bg-gradient-to-r from-[#54CF68] to-[#00827A]
+              rounded-xl shadow-lg px-6 md:px-10 py-8
+              text-white flex flex-col justify-center text-center
+              overflow-hidden"
+            >
+              <img
+                src={shape1}
+                alt=""
+                className="absolute left-0 top-0 h-full w-auto object-contain opacity-50"
+              />
+
+              <img
+                src={shape2}
+                alt=""
+                className="absolute right-0 top-0 h-full w-auto object-contain opacity-50"
+              />
+
+              <div className="relative z-10">
+                <h3 className="text-sm md:text-base opacity-90">Resolved</h3>
+                <h1 className="text-3xl md:text-4xl font-bold mt-3">0</h1>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;

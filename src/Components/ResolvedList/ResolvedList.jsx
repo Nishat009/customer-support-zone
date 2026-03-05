@@ -3,7 +3,7 @@ import React from "react";
 const ResolvedList = ({ resolved }) => {
   return (
     <div className="mt-8">
-      <h1 className="text-2xl font-bold mb-4">Resolved List</h1>
+      <h1 className="text-2xl font-bold mb-4 text-black">Resolved List</h1>
       <div className="grid gap-4">
         {resolved.map((ticket) => (
           <div key={ticket.id} className="card bg-indigo-100 shadow-md">

@@ -15,7 +15,7 @@ const CustomerCard = ({
 
   return (
     <>
-      <h1 className="text-2xl font-bold mb-4">Customer Tickets</h1>
+      <h1 className="text-2xl font-bold mb-4 text-black">Customer Tickets</h1>
       {customerTickets.length === 0 ? (
         <p>No tickets available</p>
       ) : (

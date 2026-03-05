@@ -3,7 +3,7 @@ import React from "react";
 const TaskStatus = ({ inProgress, handleComplete }) => {
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-4">Task Status</h1>
+      <h1 className="text-2xl font-bold mb-4 text-black">Task Status</h1>
       <div className="grid gap-4">
         {inProgress.map((ticket) => (
           <div key={ticket.id} className="card bg-base-100 shadow-md">

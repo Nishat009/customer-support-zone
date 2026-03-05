@@ -29,5 +29,5 @@
 
 ## 🔗 Submission
 
-- **Live Link :** https://dancing-wisp-2ae99e.netlify.app/
-- **GitHub Repository:** https://github.com/sumaiyaa005/customer-support-ticket
+- **Live Link :** https://customer-support-zone-six.vercel.app/
+- **GitHub Repository:** https://github.com/Nishat009/customer-support-zone
